@@ -1,8 +1,8 @@
 {
-  "name": "typescript-action",
-  "version": "0.0.0",
+  "name": "zorro-styles-sync-action",
+  "version": "0.0.1",
   "private": true,
-  "description": "TypeScript template action",
+  "description": "Synchronize the styles of Ant Design for NG-ZORRO",
   "main": "lib/main.js",
   "scripts": {
     "build": "tsc",
@@ -15,20 +15,33 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/actions/typescript-action.git"
+    "url": "git+https://github.com/hsuanxyz/zorro-styles-sync-action.git"
   },
   "keywords": [
     "actions",
     "node",
     "setup"
   ],
-  "author": "",
+  "author": "hsuanxyz",
   "license": "MIT",
   "dependencies": {
-    "@actions/core": "^1.6.0"
+    "@actions/core": "^1.6.0",
+    "@octokit/rest": "^18.12.0",
+    "semver": "^7.3.5",
+    "fs-extra": "^10.0.0",
+    "glob": "^7.2.0",
+    "request": "^2.88.2",
+    "simple-git": "^2.48.0",
+    "unzipper": "^0.10.11",
+    "winston": "^3.3.3"
   },
   "devDependencies": {
     "@types/node": "^16.10.5",
+    "@types/semver": "^7.3.9",
+    "@types/fs-extra": "^9.0.13",
+    "@types/glob": "^7.2.0",
+    "@types/request": "^2.48.7",
+    "@types/unzipper": "^0.10.4",
     "@typescript-eslint/parser": "^5.0.0",
     "@vercel/ncc": "^0.31.1",
     "eslint": "^7.32.0",
