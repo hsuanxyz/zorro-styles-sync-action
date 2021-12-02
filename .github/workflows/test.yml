@@ -21,4 +21,5 @@ jobs:
       - uses: actions/checkout@v2
       - uses: ./
         with:
-          milliseconds: 1000
+          account_token: ${{ secrets.BOT_TOKEN }}
+          version: ${{ github.event.inputs.version }}

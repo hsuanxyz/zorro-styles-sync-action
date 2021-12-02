@@ -1,11 +1,15 @@
-name: 'Your name here'
-description: 'Provide a description here'
-author: 'Your name or organization here'
+name: 'Synchronize Ant Design Styles'
+description: 'Synchronize the styles of Ant Design for NG-ZORRO'
+author: 'hsuanxyz'
 inputs:
-  milliseconds: # change this
+  account_token:
+    description: "The token of the syncer's account"
+    default: 'Invalid token'
     required: true
-    description: 'input description here'
-    default: 'default value if applicable'
+  version:
+    description: "Which version want to synchronize"
+    default: '${{ github.event.inputs.version }}'
+    required: false
 runs:
   using: 'node12'
   main: 'dist/index.js'
