@@ -1,6 +1,6 @@
 {
   "name": "zorro-styles-sync-action",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "private": true,
   "description": "Synchronize the styles of Ant Design for NG-ZORRO",
   "main": "lib/main.js",
