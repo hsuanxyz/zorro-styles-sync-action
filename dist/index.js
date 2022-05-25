@@ -444,6 +444,13 @@ ${diffTable}
             for (const tsxFile of tsxFiles) {
                 fs_extra_1.default.removeSync(tsxFile);
             }
+            // Antd 在一次 breaking change 中为了向下兼容将新 mention 组件命名为 mentions，
+            // 并在之后的版本中移除 原有的 mention，这里为了抱持我们的兼容性，将 Antd 的 mentions
+            // 重新命名回 mention
+            const mentionsPath = path_1.default.join(this.antDesignPath, 'components/mentions');
+            if (fs_extra_1.default.existsSync(mentionsPath)) {
+                fs_extra_1.default.renameSync(mentionsPath, path_1.default.join(this.antDesignPath, 'components/mention'));
+            }
             // 覆盖 style 文件
             for (const zorroComponent of zorroComponents) {
                 const antDesignStylePath = path_1.default.join(this.antDesignPath, `components/${zorroComponent}/style`);
